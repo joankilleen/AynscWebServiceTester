@@ -4,13 +4,18 @@
  * and open the template in the editor.
  */
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static io.restassured.RestAssured.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Ignore;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.Response;
+
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;;
+
 
 
 /**
@@ -35,13 +40,25 @@ public class AsyncITest {
     //
     @Test
     public void simple() {
-        get("http://localhost:8080/AsyncTester/rest/test").then().statusCode(200);
-      
+        //get("http://localhost:8080/AsyncTester/rest/test").then().statusCode(200);
+    	Client client = ClientBuilder.newClient();
+
+    	Future<Response> future1 = client.target("http://localhost:8080/AsyncTester/rest/async")
+    	                                 .request()
+    	                                 .async().get();
+
+    	
+
+    	// block until complete
+    	Response res1 = null;
+		try {
+			res1 = future1.get();
+		} catch (InterruptedException | ExecutionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	String result1 = res1.readEntity(String.class);
     }
     
-    @Test
-    public void reallyAsync() {
-        get("http://localhost:8080/AsyncTester/rest/async").then().statusCode(200);
-      
-    }
+    
 }

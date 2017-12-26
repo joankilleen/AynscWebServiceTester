@@ -27,7 +27,9 @@ public class AsynchronousResource {
             }
 
      private String heavyLifting() {
-
+                for (int i=1000000000; i>0; i--){
+                	;
+                }
                 return "RESULT";
 
       }
