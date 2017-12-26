@@ -1,0 +1,3 @@
+com\killeen\asynctester\rest\ApplicationConfig.class
+com\killeen\asynctester\rest\AsynchronousResource.class
+com\killeen\asynctester\rest\TestResource.class
