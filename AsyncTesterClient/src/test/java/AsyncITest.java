@@ -35,13 +35,13 @@ public class AsyncITest {
     //
     @Test
     public void simple() {
-        get("http://localhost:8080/async/rest/test").then().statusCode(200);
+        get("http://localhost:8080/AsyncTester/rest/test").then().statusCode(200);
       
     }
     
     @Test
-    public void reallyAssync() {
-        get("http://localhost:8080/async/rest/async").then().statusCode(200);
+    public void reallyAsync() {
+        get("http://localhost:8080/AsyncTester/rest/async").then().statusCode(200);
       
     }
 }
