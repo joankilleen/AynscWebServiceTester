@@ -33,7 +33,11 @@
 			<artifactId>resteasy-client</artifactId>
 			<version>3.0.2.Final</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -52,13 +56,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-log4j12</artifactId>
-				<version>1.6.1</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+	
 </project>
