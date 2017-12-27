@@ -34,7 +34,14 @@
 			<version>7.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+		<!-- https://mvnrepository.com/artifact/javax.enterprise.concurrent/javax.enterprise.concurrent-api -->
+		<dependency>
+			<groupId>javax.enterprise.concurrent</groupId>
+			<artifactId>javax.enterprise.concurrent-api</artifactId>
+			<version>1.0-b05</version>
+			<scope>provided</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>

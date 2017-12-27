@@ -16,8 +16,8 @@ public class Callback implements InvocationCallback<String> {
 
 	@Override
 	public void completed(String response) {
-		System.out.println(LocalTime.now()+ " We received a response " + response);
-
+		System.out.println(LocalTime.now()+ " We received a response " );
+        System.out.println(response);
 	}
 
 	@Override

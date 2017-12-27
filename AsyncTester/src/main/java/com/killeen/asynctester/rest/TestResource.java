@@ -20,11 +20,9 @@ import javax.ws.rs.core.Response;
  * @author Joan
  */
 @Path("test")
-@RequestScoped
 public class TestResource {
     private static final Logger LOG = Logger.getLogger(TestResource.class.getName());
     @GET
-    @Produces({APPLICATION_XML, APPLICATION_JSON})
     public Response test() {
         LOG.info("Reached test method....");
         return Response.ok().build();
