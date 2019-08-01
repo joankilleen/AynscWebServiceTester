@@ -14,7 +14,7 @@ import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("rest")
+@ApplicationPath("")
 public class ApplicationConfig extends Application {
 
     @Override
@@ -22,6 +22,7 @@ public class ApplicationConfig extends Application {
         Set<Class<?>> classes = new HashSet<>();
         classes.add(TestResource.class);
         classes.add(AsynchronousResource.class);
+        classes.add(PythonResource.class);
         return classes;
     }
 }

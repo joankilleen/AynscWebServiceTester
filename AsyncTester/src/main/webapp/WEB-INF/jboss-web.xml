@@ -1,0 +1,3 @@
+<jboss-web>
+	<context-root>async</context-root>
+</jboss-web>  

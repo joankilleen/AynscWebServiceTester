@@ -5,6 +5,7 @@
  */
 package com.killeen.asynctester.rest;
 
+import java.time.LocalDateTime;
 import java.util.logging.Logger;
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.GET;
@@ -25,7 +26,7 @@ public class TestResource {
     @GET
     public Response test() {
         LOG.info("Reached test method....");
-        return Response.ok().build();
+        return Response.ok(LocalDateTime.now().toString()).build();
     }
     
 }
