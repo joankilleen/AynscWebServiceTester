@@ -21,7 +21,6 @@ public class ApplicationConfig extends Application {
     public Set<Class<?>> getClasses() {
         Set<Class<?>> classes = new HashSet<>();
         classes.add(TestResource.class);
-        classes.add(AsynchronousResource.class);
         classes.add(PythonResource.class);
         return classes;
     }
